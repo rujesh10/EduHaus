@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boomay</title>
+    <title>She said yes!</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
             background-color: #ffebee;
             padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .valentine-card {
             background: white;
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin: 20px auto;
             max-width: 400px;
+            width: 100%;
+            animation: fadeIn 1.5s ease-in-out;
         }
         .card-content img, .card-content video {
             width: 100%;
@@ -25,16 +31,50 @@
             border-radius: 10px;
             margin-bottom: 15px;
         }
+        h1 {
+            color: #e91e63;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .confetti {
+            font-size: 2em;
+            animation: confetti 2s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes confetti {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            25% { transform: translateY(-20px) rotate(20deg); }
+            50% { transform: translateY(0) rotate(-20deg); }
+            75% { transform: translateY(-20px) rotate(20deg); }
+        }
+        .heart {
+            color: #e91e63;
+            font-size: 3em;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
     </style>
 </head>
 <body>
     <div class="valentine-card">
         <div class="card-content">
+            <div class="heart">❤️</div>
             <h1>Ich liebe dich ❤️</h1>
             <p>You make my life better in so many ways, and I’m really grateful to have you!</p>
-            <!-- <img src="IMG_20240222_205947_988.jpg" alt="Our special moment" onerror="this.onerror=null; this.alt='Image not found';"> -->
-            <img src="GIF_20250214_100306_434.gif" alt="Our joyful moment" onerror="this.onerror=null; this.alt='GIF not found';">
-            <!-- <div class="confetti">🎉</div> -->
+            <img src="GIF_20250214_110234_130.gif" alt="Our joyful moment" onerror="this.onerror=null; this.alt='GIF not found';">
+            <p>Here’s to us, today and always. 💖</p>
+            <div class="confetti">🎉</div>
         </div>
     </div>
 </body>
