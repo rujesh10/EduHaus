@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Valentine Card */
+.valentine-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card-content h1 {
+    font-size: 2.5em;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#yes-btn {
+    background: #ff6f61;
+    color: white;
+}
+
+#yes-btn:hover {
+    background: #ff4a3d;
+    transform: scale(1.1);
+}
+
+#no-btn {
+    background: #e0e0e0;
+    color: #555;
+}
+
+#no-btn:hover {
+    background: #d0d0d0;
+    transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Confetti Animation */
+.confetti {
+    font-size: 3em;
+    animation: confetti 2s infinite;
+}
+
+@keyframes confetti {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    25% {
+        transform: translateY(-20px) rotate(20deg);
+    }
+    50% {
+        transform: translateY(0) rotate(-20deg);
+    }
+    75% {
+        transform: translateY(-20px) rotate(20deg);
+    }
+}   
